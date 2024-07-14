@@ -37,6 +37,7 @@ DynamicLibrary {
 
     cpp.defines: {
         var defs = [
+            "QT_QML_DEBUG",
             "TILED_EDITOR_LIBRARY",
             "TILED_VERSION=" + project.version,
             "QT_DISABLE_DEPRECATED_BEFORE=QT_VERSION_CHECK(5,15,0)",
