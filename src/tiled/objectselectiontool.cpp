@@ -322,6 +322,7 @@ ObjectSelectionTool::ObjectSelectionTool(QObject *parent)
     , mOriginIndicator(new OriginIndicator)
     , mSelectionMode(ourSelectionMode)
 {
+    setTargetLayerType(Layer::AnyLayerType);
     QActionGroup *selectionGroup = new QActionGroup(this);
     mSelectIntersected = new QAction(selectionGroup);
     mSelectIntersected->setCheckable(true);
