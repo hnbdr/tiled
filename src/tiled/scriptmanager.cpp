@@ -371,7 +371,7 @@ void ScriptManager::initialize()
     auto engine = new QQmlEngine(this);
 
     // We'll report errors in the Console view instead
-    engine->setOutputWarningsToStandardError(false);
+    // engine->setOutputWarningsToStandardError(false);
     connect(engine, &QQmlEngine::warnings, this, &ScriptManager::onScriptWarnings);
 
     mEngine = engine;
