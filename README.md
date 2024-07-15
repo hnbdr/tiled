@@ -2,7 +2,8 @@
 >* Javascript debugger support enabled (Windows Qt6 only)
 >* Enabled error log for javascript debugger (Windows Qt6 only)
 >* Added QtQuick core libraries (Windows Qt6 only)
->* "Select Objects" tool is always active
+>* Experiments tab in the settings window
+>* Option: "Select Objects" tool is always active
 >
 >Details in [wiki](../../wiki)
 
