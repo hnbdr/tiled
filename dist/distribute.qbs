@@ -35,6 +35,29 @@ Product {
     }
 
     Group {
+        name: "Windows qt6 qtquick libs"
+        condition: qbs.targetOS.contains("windows") && Qt.core.versionMajor === 6
+        prefix: Qt.core.binPath + "/"
+        files: [
+            "Qt6Quick.dll",
+            "Qt6QmlModels.dll",
+            "Qt6QmlWorkerScript.dll",
+            "Qt6QuickControls2.dll",
+            "Qt6QuickControls2Basic.dll",
+            "Qt6QuickControls2Fusion.dll",
+            "Qt6QuickControls2FusionStyleImpl.dll",
+            "Qt6QuickControls2Impl.dll",
+            "Qt6QuickDialogs2.dll",
+            "Qt6QuickDialogs2QuickImpl.dll",
+            "Qt6QuickDialogs2Utils.dll",
+            "Qt6QuickLayouts.dll",
+            "Qt6QuickTemplates2.dll"
+        ]
+        qbs.installDir: ""
+        qbs.install: true
+    }
+
+    Group {
         name: "Qt DLLs"
         prefix: {
             if (qbs.targetOS.contains("windows")) {
@@ -77,21 +100,7 @@ Product {
                     "Qt" + major + "Network" + postfix,
                     "Qt" + major + "Qml" + postfix,
                     "Qt" + major + "Svg" + postfix,
-                    "Qt" + major + "Widgets" + postfix,
-                    // QtQuick basic libraries
-                    "Qt" + major + "Quick" + postfix,
-                    "Qt" + major + "QmlModels" + postfix,
-                    "Qt" + major + "QmlWorkerScript" + postfix,
-                    "Qt" + major + "QuickControls2" + postfix,
-                    "Qt" + major + "QuickControls2Basic" + postfix,
-                    "Qt" + major + "QuickControls2Fusion" + postfix,
-                    "Qt" + major + "QuickControls2FusionStyleImpl" + postfix,
-                    "Qt" + major + "QuickControls2Impl" + postfix,
-                    "Qt" + major + "QuickDialogs2" + postfix,
-                    "Qt" + major + "QuickDialogs2QuickImpl" + postfix,
-                    "Qt" + major + "QuickDialogs2Utils" + postfix,
-                    "Qt" + major + "QuickLayouts" + postfix,
-                    "Qt" + major + "QuickTemplates2" + postfix
+                    "Qt" + major + "Widgets" + postfix
                 );
 
                 if (major >= 6) {
