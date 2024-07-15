@@ -3,6 +3,8 @@
 >* Enabled error log for javascript debugger (Windows Qt6 only)
 >* Added QtQuick core libraries (Windows Qt6 only)
 >* "Select Objects" tool is always active
+>
+>Details in [wiki](../../wiki)
 
 Tiled Map Editor - https://www.mapeditor.org/
 
