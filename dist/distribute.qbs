@@ -77,7 +77,21 @@ Product {
                     "Qt" + major + "Network" + postfix,
                     "Qt" + major + "Qml" + postfix,
                     "Qt" + major + "Svg" + postfix,
-                    "Qt" + major + "Widgets" + postfix
+                    "Qt" + major + "Widgets" + postfix,
+                    // QtQuick basic libraries
+                    "Qt" + major + "Quick" + postfix,
+                    "Qt" + major + "QmlModels" + postfix,
+                    "Qt" + major + "QmlWorkerScript" + postfix,
+                    "Qt" + major + "QuickControls2" + postfix,
+                    "Qt" + major + "QuickControls2Basic" + postfix,
+                    "Qt" + major + "QuickControls2Fusion" + postfix,
+                    "Qt" + major + "QuickControls2FusionStyleImpl" + postfix,
+                    "Qt" + major + "QuickControls2Impl" + postfix,
+                    "Qt" + major + "QuickDialogs2" + postfix,
+                    "Qt" + major + "QuickDialogs2QuickImpl" + postfix,
+                    "Qt" + major + "QuickDialogs2Utils" + postfix,
+                    "Qt" + major + "QuickLayouts" + postfix,
+                    "Qt" + major + "QuickTemplates2" + postfix
                 );
 
                 if (major >= 6) {
