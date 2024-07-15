@@ -55,6 +55,7 @@ private:
     void initialize();
 
 public:
+    bool experimentObjectSelectionAlwaysEnabled() const;
     bool showGrid() const;
     bool showTileObjectOutlines() const;
     bool showTileAnimations() const;
@@ -185,6 +186,7 @@ public:
     static void setStartupSession(const QString &filePath);
 
 public slots:
+    void setExperimentObjectSelectionAlwaysEnabled(bool enabled);
     void setShowGrid(bool showGrid);
     void setShowTileObjectOutlines(bool enabled);
     void setShowTileAnimations(bool enabled);

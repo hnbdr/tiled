@@ -135,6 +135,11 @@ void Preferences::initialize()
     }
 }
 
+bool Preferences::experimentObjectSelectionAlwaysEnabled() const
+{
+    return get("Experiments/ObjectSelectionAlwaysEnabled", false);
+}
+
 bool Preferences::showGrid() const
 {
     return get("Interface/ShowGrid", true);
@@ -305,6 +310,11 @@ void Preferences::setCustomFont(const QFont &font)
 Map::LayerDataFormat Preferences::layerDataFormat() const
 {
     return static_cast<Map::LayerDataFormat>(get<int>("Storage/LayerDataFormat", Map::CSV));
+}
+
+void Preferences::setExperimentObjectSelectionAlwaysEnabled(bool enabled)
+{
+    setValue(QLatin1String("Experiments/ObjectSelectionAlwaysEnabled"), enabled);
 }
 
 void Preferences::setShowGrid(bool showGrid)

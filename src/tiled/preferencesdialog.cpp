@@ -85,6 +85,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent)
 
     auto *preferences = Preferences::instance();
 
+    connect(mUi->experimentObjectSelectionAlwaysEnabled, &QCheckBox::toggled,
+            preferences, &Preferences::setExperimentObjectSelectionAlwaysEnabled);
     connect(mUi->reloadTilesetImages, &QCheckBox::toggled,
             preferences, &Preferences::setReloadTilesetsOnChanged);
     connect(mUi->restoreSession, &QCheckBox::toggled,
@@ -272,6 +274,9 @@ void PreferencesDialog::fromPreferences()
     mUi->baseColorLabel->setEnabled(!systemStyle);
     mUi->selectionColor->setEnabled(!systemStyle);
     mUi->selectionColorLabel->setEnabled(!systemStyle);
+
+    // Experiments
+    mUi->experimentObjectSelectionAlwaysEnabled->setChecked(prefs->experimentObjectSelectionAlwaysEnabled());
 }
 
 void PreferencesDialog::retranslateUi()
