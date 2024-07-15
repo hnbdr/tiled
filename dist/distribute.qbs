@@ -58,6 +58,17 @@ Product {
     }
 
     Group {
+        name: "Windows qt6 qml debugger tools"
+        condition: qbs.targetOS.contains("windows") && Qt.core.versionMajor === 6
+        prefix: Qt.core.pluginPath + "/"
+        files: [
+            "qmltooling/**"
+        ]
+        qbs.installDir: "/qmltooling"
+        qbs.install: true
+    }
+
+    Group {
         name: "Qt DLLs"
         prefix: {
             if (qbs.targetOS.contains("windows")) {
