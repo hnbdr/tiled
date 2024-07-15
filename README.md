@@ -1,3 +1,9 @@
+> ## Fork for personal use. Differences with the main project:
+>* Javascript debugger support enabled
+>* Enabled error log for javascript debugger
+>* Added QtQuick core libraries (Windows Qt6 only)
+>* "Select Objects" tool is always active
+
 Tiled Map Editor - https://www.mapeditor.org/
 
 About Tiled
