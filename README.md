@@ -1,6 +1,6 @@
 > ## Fork for personal use. Differences with the main project:
->* Javascript debugger support enabled
->* Enabled error log for javascript debugger
+>* Javascript debugger support enabled (Windows Qt6 only)
+>* Enabled error log for javascript debugger (Windows Qt6 only)
 >* Added QtQuick core libraries (Windows Qt6 only)
 >* "Select Objects" tool is always active
 
