@@ -656,6 +656,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QCheckBox" name="experimentShowLayerOpacityTooltip">
+           <property name="text">
+            <string>Show layer opacity tooltip</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer_7">
            <property name="orientation">
             <enum>Qt::Vertical</enum>

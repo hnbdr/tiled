@@ -140,6 +140,11 @@ bool Preferences::experimentObjectSelectionAlwaysEnabled() const
     return get("Experiments/ObjectSelectionAlwaysEnabled", false);
 }
 
+bool Preferences::experimentShowLayerOpacityTooltip() const
+{
+    return get("Experiments/ShowLayerOpacityTooltip", false);
+}
+
 bool Preferences::showGrid() const
 {
     return get("Interface/ShowGrid", true);
@@ -315,6 +320,11 @@ Map::LayerDataFormat Preferences::layerDataFormat() const
 void Preferences::setExperimentObjectSelectionAlwaysEnabled(bool enabled)
 {
     setValue(QLatin1String("Experiments/ObjectSelectionAlwaysEnabled"), enabled);
+}
+
+void Preferences::setExperimentShowLayerOpacityTooltip(bool enabled)
+{
+    setValue(QLatin1String("Experiments/ShowLayerOpacityTooltip"), enabled);
 }
 
 void Preferences::setShowGrid(bool showGrid)

@@ -56,6 +56,7 @@ private:
 
 public:
     bool experimentObjectSelectionAlwaysEnabled() const;
+    bool experimentShowLayerOpacityTooltip() const;
     bool showGrid() const;
     bool showTileObjectOutlines() const;
     bool showTileAnimations() const;
@@ -187,6 +188,7 @@ public:
 
 public slots:
     void setExperimentObjectSelectionAlwaysEnabled(bool enabled);
+    void setExperimentShowLayerOpacityTooltip(bool enabled);
     void setShowGrid(bool showGrid);
     void setShowTileObjectOutlines(bool enabled);
     void setShowTileAnimations(bool enabled);

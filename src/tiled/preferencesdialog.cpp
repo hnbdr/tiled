@@ -85,8 +85,12 @@ PreferencesDialog::PreferencesDialog(QWidget *parent)
 
     auto *preferences = Preferences::instance();
 
+    // Experiments
     connect(mUi->experimentObjectSelectionAlwaysEnabled, &QCheckBox::toggled,
             preferences, &Preferences::setExperimentObjectSelectionAlwaysEnabled);
+    connect(mUi->experimentShowLayerOpacityTooltip, &QCheckBox::toggled,
+            preferences, &Preferences::setExperimentShowLayerOpacityTooltip);
+
     connect(mUi->reloadTilesetImages, &QCheckBox::toggled,
             preferences, &Preferences::setReloadTilesetsOnChanged);
     connect(mUi->restoreSession, &QCheckBox::toggled,
@@ -277,6 +281,7 @@ void PreferencesDialog::fromPreferences()
 
     // Experiments
     mUi->experimentObjectSelectionAlwaysEnabled->setChecked(prefs->experimentObjectSelectionAlwaysEnabled());
+    mUi->experimentShowLayerOpacityTooltip->setChecked(prefs->experimentShowLayerOpacityTooltip());
 }
 
 void PreferencesDialog::retranslateUi()

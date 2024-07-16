@@ -49,6 +49,8 @@
 
 #include <QtDebug>
 #include <QMetaEnum>
+#include "preferences.h"
+#include <QToolTip>
 
 using namespace Tiled;
 
@@ -228,6 +230,17 @@ void LayerDock::sliderValueChanged(int opacity)
         layerModel->setData(layerModel->index(layer),
                             qreal(opacity) / 100,
                             LayerModel::OpacityRole);
+
+        if (Preferences::instance()->experimentShowLayerOpacityTooltip()) {
+            int sliderValue = mOpacitySlider->value();
+            int width = mOpacitySlider->width() - mOpacityLabel->width();
+            int sliderPos = mOpacitySlider->style()->sliderPositionFromValue(mOpacitySlider->minimum(), mOpacitySlider->maximum(), sliderValue, width);
+            QPoint widgetGlobalPos = mOpacitySlider->mapToGlobal(QPoint(0,0));
+            QPoint point(widgetGlobalPos.x() + sliderPos, widgetGlobalPos.y());
+            QRect emptyRect;
+            QString text = QString::number(sliderValue) + QStringLiteral("%");
+            QToolTip::showText(point, text, nullptr, emptyRect, 1000);
+        }
     }
 }
 
