@@ -4,6 +4,7 @@
 >* Added QtQuick core libraries (Windows Qt6 only)
 >* Experiments tab in the settings window
 >* Option: "Select Objects" tool is always active
+>* Option: Show layer opacity slider tooltip (draft)
 >
 >Details in [wiki](../../wiki)
 
